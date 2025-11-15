@@ -27,6 +27,11 @@
     "@babel/helper-string-parser" "^7.27.1"
     "@babel/helper-validator-identifier" "^7.28.5"
 
+"@bokub/prettier-config@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@bokub/prettier-config/-/prettier-config-2.1.0.tgz#66d9e7ba776525bae8560ab46d299f5b946fbaff"
+  integrity sha512-b2ZcqpwpT0mF12E9Es00uoALK5HrejLwYil9BMtFGi0PaMfo2vHVIoPMUVEn4h6rGiyMZSUynlGH2EneGhGXow==
+
 "@emnapi/core@^1.5.0", "@emnapi/core@^1.6.0":
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.7.1.tgz#3a79a02dbc84f45884a1806ebb98e5746bdfaac4"

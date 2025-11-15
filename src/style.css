@@ -1,105 +1,113 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-    --accent: #14b8a6; /* teal */
-    --accent-dark: #0d9488;
+  --accent: #14b8a6; /* teal */
+  --accent-dark: #0d9488;
 }
 
 * {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 .dark {
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 .sparkline {
-    overflow: visible;
+  overflow: visible;
 }
 
-.toast-enter-active, .toast-leave-active {
-    transition: all 0.3s ease;
+.toast-enter-active,
+.toast-leave-active {
+  transition: all 0.3s ease;
 }
 
 .toast-enter-from {
-    transform: translateX(100%);
-    opacity: 0;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .toast-leave-to {
-    transform: translateX(100%);
-    opacity: 0;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
-.fade-enter-active, .fade-leave-active {
-    transition: opacity 0.2s ease;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
 }
 
-.fade-enter-from, .fade-leave-to {
-    opacity: 0;
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
-.slide-enter-active, .slide-leave-active {
-    transition: all 0.3s ease;
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease;
 }
 
 .slide-enter-from {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .slide-leave-to {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 4px;
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: #475569;
+  background: #475569;
 }
 
 .status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
 }
 
 .status-ok {
-    background-color: #10b981;
+  background-color: #10b981;
 }
 
 .status-warning {
-    background-color: #f59e0b;
+  background-color: #f59e0b;
 }
 
 .status-error {
-    background-color: #ef4444;
+  background-color: #ef4444;
 }
 
 @keyframes pulse-ring {
-    0% {
-        transform: scale(0.95);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
-    }
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 .pulse-ring {
-    animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

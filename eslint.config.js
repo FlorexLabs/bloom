@@ -7,50 +7,43 @@ import css from '@eslint/css'
 import {defineConfig, globalIgnores} from 'eslint/config'
 
 export default defineConfig([
-    // Ignore common generated stuff
-    globalIgnores([
-        '.config/**',
-        'node_modules/**',
-        'dist/**',
-        'yarn.lock',
-        'package*.json',
-        '.vscode/**'
-    ]),
+  // Ignore common generated stuff
+  globalIgnores(['.config/**', 'node_modules/**', 'dist/**', 'yarn.lock', 'package*.json', '.vscode/**']),
 
-    // JavaScript + Vue files
-    {
-        files: ['**/*.{js,mjs,cjs,vue}'],
-        languageOptions: {
-            globals: {...globals.browser, ...globals.node}
-        },
-        plugins: {vue: pluginVue},
-        extends: [js.configs.recommended, pluginVue.configs['flat/essential']],
-        rules: {
-            'vue/multi-word-component-names': 'error'
-        }
+  // JavaScript + Vue files
+  {
+    files: ['**/*.{js,mjs,cjs,vue}'],
+    languageOptions: {
+      globals: {...globals.browser, ...globals.node},
     },
-
-    // JSON
-    {
-        files: ['**/*.json'],
-        plugins: {json},
-        extends: [json.configs.recommended]
+    plugins: {vue: pluginVue},
+    extends: [js.configs.recommended, pluginVue.configs['flat/essential']],
+    rules: {
+      'vue/multi-word-component-names': 'error',
     },
+  },
 
-    // Markdown
-    {
-        files: ['**/*.md'],
-        plugins: {markdown},
-        extends: [markdown.configs.recommended]
+  // JSON
+  {
+    files: ['**/*.json'],
+    plugins: {json},
+    extends: [json.configs.recommended],
+  },
+
+  // Markdown
+  {
+    files: ['**/*.md'],
+    plugins: {markdown},
+    extends: [markdown.configs.recommended],
+  },
+
+  // CSS
+  {
+    files: ['**/*.css'],
+    language: 'css/css',
+    plugins: {
+      css,
     },
-
-    // CSS
-    {
-        files: ['**/*.css'],
-        language: 'css/css',
-        plugins: {
-            css
-        },
-        extends: [css.configs.recommended]
-    }
+    extends: [css.configs.recommended],
+  },
 ])
